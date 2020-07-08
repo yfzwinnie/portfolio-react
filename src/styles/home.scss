@@ -1,0 +1,357 @@
+@import "./colors";
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+
+  .sky {
+    .cloud {
+      width: 100px;
+      background: $light-purple;
+      height: 40px;
+      position: absolute;
+      top: 30px;
+      border-radius: 50px;
+
+      @media (min-width: 480px) {
+        width: 200px;
+        top: 60px;
+        height: 80px;
+      }
+
+      &:after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        position: absolute;
+        background: $light-purple;
+        bottom: 30px;
+        left: 20px;
+
+        @media (min-width: 480px) {
+          width: 50px;
+          height: 50px;
+          bottom: 55px;
+          left: 110px;
+        }
+      }
+
+      &:before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: absolute;
+        background: $light-purple;
+        bottom: 15px;
+        left: 38px;
+
+        @media (min-width: 480px) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      &:first-child {
+        animation: sky 100s linear infinite both;
+      }
+
+      &:nth-child(2) {
+        animation: sky 80s linear 20s infinite both;
+        top: 50px;
+        transform: scale(0.5, 0.5);
+
+        @media (min-width: 480px) {
+          top: 100px;
+        }
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+
+    @media (min-width: 480px) {
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+
+    .introduction {
+      display: flex;
+      flex-direction: column;
+      color: $light-purple;
+      align-items: center;
+
+      @media (min-width: 480px) {
+        align-items: flex-start;
+        padding-left: 20px;
+      }
+
+      .name {
+        font-size: 56px;
+        padding-bottom: 20px;
+      }
+
+      .description {
+        font-size: 24px;
+        padding-bottom: 20px;
+      }
+
+      #see-more-btn {
+        position: absolute;
+        bottom: 4%;
+        display: flex;
+        align-items: center;
+        @media (min-width: 480px) {
+          bottom: 20%;
+        }
+
+        a {
+          color: $teal;
+          font-size: 18px;
+          animation: bounce 5s linear infinite both;
+          margin-left: 5px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .tree-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-basis: 500px;
+
+      .tree {
+        position: absolute;
+        bottom: 10%;
+
+        .trunk {
+          width: 40px;
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-bottom: 350px solid $brown;
+
+          .branch {
+            width: 5px;
+            height: 0;
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            position: absolute;
+            border-bottom: solid $brown;
+            &:first-child {
+              left: 104px;
+              transform: rotate(55deg);
+              border-bottom-width: 150px;
+              top: 40px;
+            }
+
+            &:nth-child(2) {
+              right: 125px;
+              transform: rotate(305deg);
+              border-bottom-width: 250px;
+            }
+
+            &:nth-child(3) {
+              border-bottom-width: 45px;
+              left: 102px;
+              top: 74px;
+              transform: rotate(10deg);
+            }
+
+            &:nth-child(4) {
+              border-bottom-width: 122px;
+              right: 88px;
+              top: 0px;
+              transform: rotate(305deg);
+            }
+          }
+        }
+
+        .trunk-shadow {
+          background-color: darken($brown, 20%);
+        }
+
+        .leaves {
+          .leaf {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: $green;
+            border-radius: 50px;
+            transition: 1s;
+
+            @media (min-width: 480px) {
+              width: 100px;
+              height: 100px;
+            }
+
+            &:first-child {
+              opacity: 80%;
+              top: 0;
+              left: 65px;
+              animation: fade 20s ease-in infinite both;
+            }
+
+            &:nth-child(2) {
+              left: 128px;
+              top: 26px;
+              opacity: 60%;
+              animation: fade 20s ease-out 2s infinite reverse both;
+            }
+
+            &:nth-child(3) {
+              bottom: 295px;
+              left: 110px;
+              opacity: 90%;
+              animation: fade 20s ease-in 4s infinite alternate both;
+            }
+
+            &:nth-child(4) {
+              bottom: 332px;
+              left: 26px;
+              animation: fade 20s ease-in 6s infinite alternate-reverse both;
+            }
+
+            &:nth-child(5) {
+              bottom: 336px;
+              left: 70px;
+              opacity: 65%;
+              animation: fade 20s ease-in 8s infinite both;
+            }
+
+            &:nth-child(6) {
+              bottom: 280px;
+              right: 104px;
+              opacity: 85%;
+              animation: fade 20s ease-out infinite reverse both;
+            }
+
+            &:nth-child(7) {
+              top: 0;
+              right: 152px;
+              animation: fade 20s ease-in 2s infinite both;
+            }
+
+            &:nth-child(8) {
+              top: 42px;
+              right: 116px;
+              opacity: 85%;
+              animation: fade 20s ease-in-out 4s infinite alternate both;
+            }
+
+            &:nth-child(9) {
+              bottom: 288px;
+              opacity: 90%;
+              animation: fade 20s ease-out 6s infinite alternate-reverse both;
+            }
+
+            &:nth-child(10) {
+              bottom: 380px;
+              opacity: 75%;
+              animation: fade 20s ease-in 8s infinite reverse both;
+            }
+
+            &:nth-child(11) {
+              right: 50px;
+              bottom: 350px;
+              opacity: 50%;
+              animation: fade 20s 10s infinite both ease-in;
+            }
+
+            &:nth-child(12) {
+              bottom: 278px;
+              right: 40px;
+              animation: fade 20s 15s infinite both ease-in;
+            }
+
+            &:nth-child(13) {
+              bottom: 350px;
+              right: 85px;
+              animation: fade 20s 20s infinite both ease-in;
+            }
+
+            &:nth-child(14) {
+              top: 28px;
+              right: 40px;
+              opacity: 85%;
+              animation: fade 20s 5s infinite both ease-in;
+            }
+
+            &:nth-child(15) {
+              top: 48px;
+              left: 18px;
+              opacity: 55%;
+              animation: fade 20s 10s infinite both ease-in;
+            }
+          }
+        }
+      }
+
+      .grass {
+        background-color: $light-blue;
+        width: 300px;
+        height: 80px;
+        border-radius: 50% / 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        position: absolute;
+        bottom: 8%;
+        opacity: 80%;
+        z-index: -1;
+
+        @media (min-width: 480px) {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes sky {
+  from {
+    transform: translateX(-15vw);
+  }
+  to {
+    transform: translateX(80vw);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  50%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 30%;
+  }
+  40% {
+    opacity: 40%;
+  }
+  60% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
