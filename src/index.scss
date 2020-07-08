@@ -12,17 +12,21 @@ html {
 
     section {
       height: 100vh;
-      padding: 60px;
+      padding: 3.75rem;
       background-color: $light-purple;
 
       .typewriter {
-        border-right: solid 3px $light-blue;
+        border-right: solid 0.1875rem darken($light-blue, 20%);
         white-space: nowrap;
         overflow: hidden;
-        font-size: 28px;
-        color: $light-blue;
+        font-size: 1.75rem;
+        color: darken($light-blue, 20%);
         animation: animated-text 4s steps(29, end) 1s 1 normal both,
           animated-cursor 1s steps(29, end);
+      }
+
+      p {
+        line-height: 1.125rem;
       }
     }
   }

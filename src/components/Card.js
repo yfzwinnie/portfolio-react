@@ -12,7 +12,7 @@ const Card = ({ card }) => {
         {card.type === "paragraph" ? (
           <p>{card.text}</p>
         ) : (
-          <ul>{renderList(card.text)}</ul>
+          <ul className="card-list">{renderList(card.text)}</ul>
         )}
       </div>
     </details>

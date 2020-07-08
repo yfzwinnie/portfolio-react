@@ -92,17 +92,17 @@
 
       @media (min-width: 480px) {
         align-items: flex-start;
-        padding-left: 20px;
+        padding-left: 1.25rem;
       }
 
       .name {
-        font-size: 56px;
-        padding-bottom: 20px;
+        font-size: 3.5rem;
+        padding-bottom: 1.25rem;
       }
 
       .description {
-        font-size: 24px;
-        padding-bottom: 20px;
+        font-size: 1.5rem;
+        padding-bottom: 1.25rem;
       }
 
       #see-more-btn {
@@ -110,16 +110,21 @@
         bottom: 4%;
         display: flex;
         align-items: center;
+
         @media (min-width: 480px) {
           bottom: 20%;
         }
 
         a {
           color: $teal;
-          font-size: 18px;
+          font-size: 1.125rem;
           animation: bounce 5s linear infinite both;
-          margin-left: 5px;
+          margin-left: 0.3125rem;
           text-decoration: none;
+
+          &:focus {
+            outline: 2px auto ghostwhite;
+          }
         }
       }
     }

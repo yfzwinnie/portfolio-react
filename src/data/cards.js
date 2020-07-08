@@ -9,7 +9,7 @@ export default [
     title: "I am passionate about",
     type: "list",
     text:
-      "Intuitive User Interface, Accessibility, Continuous Learning, Mentorship & Training, Animal Welfare, Sustainability, Arts & Crafts, Gardening, Cooking.",
+      "Intuitive User Interface, Accessibility, Continuous Learning, Mentorship & Training, Animal Welfare, Sustainability, Arts & Crafts, Gardening, Cooking",
   },
   {
     title: "I've been learning",

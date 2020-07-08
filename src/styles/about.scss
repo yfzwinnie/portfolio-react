@@ -26,8 +26,8 @@
 
       .accordion-card {
         background-color: $light-blue;
-        margin-bottom: 20px;
-        font-size: 20px;
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
         color: white;
         position: relative;
         -webkit-box-shadow: 1px 1px 5px 0px rgba(110, 107, 110, 1);
@@ -40,15 +40,29 @@
           box-shadow: 2px 4px 15px 0px rgba(110, 107, 110, 1);
         }
 
+        &[open] summary ~ * {
+          animation: sweep 0.5s ease-in-out;
+        }
+
         summary {
-          padding: 20px;
+          padding: 1.25rem;
           cursor: pointer;
+
+          &:focus {
+            outline: 2px solid ghostwhite;
+          }
         }
 
         .card-body {
           display: flex;
-          padding: 10px 40px 20px 40px;
-          font-size: 16px;
+          padding: 0 2.5rem 1.25rem 2.5rem;
+          font-size: 1rem;
+
+          .card-list {
+            list-style-type: circle;
+            padding-inline-start: 1.25rem;
+            line-height: 1.125rem;
+          }
         }
       }
     }
@@ -60,6 +74,17 @@
     width: 0;
   }
   to {
-    width: 150px;
+    width: 9.375rem;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
   }
 }
