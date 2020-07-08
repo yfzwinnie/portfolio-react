@@ -1,0 +1,65 @@
+@import "./colors";
+
+#about {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .drawing {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        margin-top: 0;
+      }
+    }
+
+    .accordion {
+      flex-basis: 75%;
+
+      .accordion-card {
+        background-color: $light-blue;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: white;
+        position: relative;
+        -webkit-box-shadow: 1px 1px 5px 0px rgba(110, 107, 110, 1);
+        -moz-box-shadow: 1px 1px 5px 0px rgba(110, 107, 110, 1);
+        box-shadow: 1px 1px 5px 0px rgba(110, 107, 110, 1);
+
+        &:hover {
+          -webkit-box-shadow: 2px 4px 15px 0px rgba(110, 107, 110, 1);
+          -moz-box-shadow: 2px 4px 15px 0px rgba(110, 107, 110, 1);
+          box-shadow: 2px 4px 15px 0px rgba(110, 107, 110, 1);
+        }
+
+        summary {
+          padding: 20px;
+          cursor: pointer;
+        }
+
+        .card-body {
+          display: flex;
+          padding: 10px 40px 20px 40px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 150px;
+  }
+}
