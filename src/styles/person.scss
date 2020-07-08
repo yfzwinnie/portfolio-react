@@ -1,0 +1,214 @@
+@import "./colors";
+
+.person {
+  position: relative;
+  width: 330px;
+  height: 200px;
+
+  .face {
+    width: 50px;
+    height: 100px;
+    background-color: tan;
+    width: 102px;
+    border-radius: 40px;
+    position: relative;
+    left: 120px;
+    top: 39px;
+    position: relative;
+
+    .eye {
+      width: 12px;
+      height: 12px;
+      border-radius: 75% 15%;
+      transform: rotate(45deg);
+      position: absolute;
+      z-index: 1;
+      top: 58px;
+      border-top: solid 1px #000;
+      border-left: solid 2.5px #000;
+
+      &:first-child {
+        left: 26px;
+      }
+
+      &:nth-child(2) {
+        left: 60px;
+      }
+
+      &:before {
+        content: "";
+        background: black;
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border: solid 2px #414203;
+        border-radius: 50%;
+        left: 2px;
+        top: 2px;
+      }
+    }
+
+    .nose {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      z-index: 1;
+      top: 72px;
+      left: 45px;
+      border-radius: 15px 15px 20px 20px;
+      -webkit-box-shadow: 8px 0px 14px 0px rgba(173, 140, 100, 1);
+      -moz-box-shadow: 8px 0px 14px 0px rgba(173, 140, 100, 1);
+      box-shadow: 8px 0px 14px 0px rgba(173, 140, 100, 1);
+    }
+
+    .mouth {
+      position: absolute;
+      width: 28px;
+      height: 13px;
+      border: 3px solid #8e6068;
+      z-index: 1;
+      top: 87px;
+      left: 33px;
+      border-radius: 0px 0px 20px 20px;
+      background-color: #825e64;
+
+      .teeth {
+        width: 28px;
+        background-color: #f5f5f5;
+        height: 3px;
+        opacity: 0.8;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .tongue {
+        position: absolute;
+        width: 13px;
+        height: 4px;
+        background-color: #d0919c;
+        bottom: 0px;
+        right: 6px;
+        border-radius: 50%;
+        transform: rotate(-3deg);
+      }
+    }
+
+    .face-bottom {
+      width: 100px;
+      padding-bottom: 100px;
+      border-radius: 36px;
+      overflow: hidden;
+      transform-origin: 100% 0;
+      transform: rotate(225deg);
+      top: 61px;
+      position: absolute;
+      right: 122px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 100%;
+        height: 141%;
+        transform-origin: inherit;
+        transform: rotate(45deg);
+        background: tan;
+      }
+    }
+  }
+
+  .hair {
+    .hair-part {
+      &:first-child {
+        width: 75px;
+        height: 56px;
+        border-radius: 75% 15%;
+        position: absolute;
+        transform: rotate(63deg);
+        left: 150px;
+        top: 27px;
+        z-index: 1;
+        background-color: #423d41;
+      }
+
+      &:nth-child(2) {
+        width: 56px;
+        height: 56px;
+        border-radius: 75% 15%;
+        position: absolute;
+        transform: rotate(-8deg);
+        left: 112px;
+        top: 37px;
+        z-index: 1;
+        background-color: #423d41;
+      }
+
+      &:nth-child(3) {
+        width: 24px;
+        height: 102px;
+        position: absolute;
+        background-color: #423d41;
+        left: 114px;
+        z-index: 1;
+        top: 68px;
+        border-radius: 20px 0 0 20px;
+      }
+
+      &:nth-child(4) {
+        width: 22px;
+        height: 115px;
+        position: absolute;
+        background-color: #423d41;
+        left: 206px;
+        z-index: 1;
+        top: 55px;
+        border-radius: 0px 20px 20px 0px;
+      }
+    }
+
+    .back-hair {
+      background-color: #2b282b;
+      width: 72px;
+      height: 59px;
+      position: absolute;
+      left: 135px;
+      top: 111px;
+
+      .back-hair-spot {
+        height: 0;
+        position: absolute;
+        bottom: 0;
+
+        &:first-child {
+          border-left: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-bottom: 6px solid $light-blue;
+          left: 56px;
+          transform: rotate(-3deg);
+        }
+
+        &:nth-child(2) {
+          border-left: 2px solid transparent;
+          border-right: 2px solid transparent;
+          border-bottom: 9px solid $light-blue;
+          left: 7px;
+          transform: rotate(10deg);
+          bottom: -3px;
+        }
+      }
+    }
+  }
+
+  .neck {
+    border-bottom: 20px solid tan;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    height: 0;
+    width: 20px;
+    position: absolute;
+    left: 159px;
+    top: 150px;
+    z-index: 1;
+  }
+}
