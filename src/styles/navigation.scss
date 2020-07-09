@@ -23,30 +23,33 @@ aside {
       width: 30px;
 
       .bubble {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: $green;
-        cursor: pointer;
         list-style: none;
         display: flex;
         align-items: flex-end;
         justify-content: center;
 
-        &.active {
-          width: 30px;
-          height: 30px;
-        }
-
-        &:hover {
-          background-color: lighten($green, 30%);
-        }
-
         a {
-          font-size: 20px;
-          padding: 2px;
+          font-size: 32px;
+          line-height: 18px;
+          color: #71a271;
+          text-decoration: none;
           color: transparent;
           text-decoration: none;
+          border-radius: 50%;
+          background-color: $green;
+
+          &:focus,
+          &:hover {
+            background-color: lighten($green, 30%);
+            outline: none;
+            border-radius: 50%;
+          }
+        }
+
+        &.active a {
+          font-size: 48px;
+          line-height: 28px;
+          background-color: lighten($green, 30%);
         }
       }
     }
