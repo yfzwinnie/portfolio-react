@@ -1,0 +1,54 @@
+@import "./colors";
+
+aside {
+  .side-nav {
+    height: 80vh;
+    position: relative;
+
+    .nav-line {
+      width: 5px;
+      background-color: $brown;
+      height: 80vh;
+      position: absolute;
+    }
+
+    .bubble-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      right: -18px;
+      height: 80vh;
+      align-items: center;
+      width: 30px;
+
+      .bubble {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $green;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        &.active {
+          width: 30px;
+          height: 30px;
+        }
+
+        &:hover {
+          background-color: lighten($green, 30%);
+        }
+
+        a {
+          font-size: 20px;
+          padding: 2px;
+          color: transparent;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
